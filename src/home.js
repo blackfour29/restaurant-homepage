@@ -22,7 +22,7 @@ function createHomePage()
       </div>
       <div class="home__card home__suggestion-card">
         <h1 class="home__card-title">Have a suggestion or reclamation?</h1>
-        <button class="home__send-message-button">Send message</button>
+        <button class="home__send-message-button">Contact us</button>
       </div>
     </div>
   `;

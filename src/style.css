@@ -16,8 +16,21 @@ html{
 
 body{
   min-height: 100vh;
+  position: relative;
 }
 
+body::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./images/background-pattern.jpg');
+  filter:blur(1px);
+  opacity: 0.7;
+  z-index: -5;
+}
 /* Header */
 
 .header__logo{
@@ -26,13 +39,15 @@ body{
 }
 
 .header{
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
   background-color: rgb(250, 237, 209);
+  background-color: rgb(251,251,240);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 .menu__list{
@@ -69,6 +84,7 @@ body{
 
 .main{
   width: 100%;
+  min-height: calc(100% - 679px);
   padding-bottom: 5rem;
   position: relative;
 }
@@ -374,4 +390,64 @@ body{
 
 .contact__opening__hours{
   display: inline;
+}
+
+@media screen and (max-width: 1100px){
+
+  .header__logo{
+    min-width: 120px;
+  }
+  
+  .home__cards{
+    grid-template-columns: 1fr;
+  }
+
+  .home__content{
+    width: 100%;
+  }
+
+  .home__card{
+    width: 60%;
+  }
+
+  .menu__full-menu{
+    padding: 0;
+  }
+
+  .about__content{
+    flex-direction: column;
+  }
+
+  .about__left-side{
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact__info{
+    flex-direction: column;
+  }
+
+  .contact__opening-hours__row{
+    box-sizing: border-box;
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 700px){
+
+  .home__image{
+    width: 90%;
+  }
+
+  .home__card{
+    width: 80%;
+  }
+
+  .about__content{
+    width: 90%;
+  }
+
+  .contact__content{
+    width: 90%;
+  }
 }
