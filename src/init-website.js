@@ -1,9 +1,3 @@
-// import imageUrl from './images/background.jpg';
-// const myImg = new Image();
-// myImg.src = imageUrl; 
-// myImg.classList.add('bigimg');
-// content.appendChild(myImg);
-
 import logoPath from './images/restaurant-logo.png';
 import createHomePage from "./home";
 import createMenuPage from './menu';
@@ -25,12 +19,6 @@ function init()
   document.querySelector('.main__content').appendChild(homePage);
   addPageButtonsEvents('home');
 
-  // document.querySelector('.main__content').appendChild(menuPage);
-  // document.querySelector('.main__content').appendChild(aboutPage);
-  // document.querySelector('.main__content').appendChild(contactPage);
-
-
-
 }
 
 export default init;
@@ -47,12 +35,6 @@ function createHeader()
 
   let navMenu = createNavMenu();
   headerEl.appendChild(navMenu);
-
-  // const orderNowBtn = document.createElement('li');
-  // orderNowBtn.classList.add('menu__item', 'menu__order-now');
-  // orderNowBtn.textContent = 'Order now!';
-
-  // // headerEl.appendChild(orderNowBtn);
 
   return headerEl;
 }
@@ -80,9 +62,6 @@ function createNavMenu()
   const contactBtn = document.createElement('li');
   contactBtn.classList.add('menu__item', 'menu__contact');
   contactBtn.textContent = 'Contact';
-
-  
-
 
   [homeBtn, menuBtn, aboutBtn, contactBtn].forEach(button => {
     button.addEventListener('click', changePage);
@@ -143,7 +122,6 @@ function changePageTo(pageName){
   main.appendChild(page);
 
   addPageButtonsEvents(pageName);
-
 }
 
 function addPageButtonsEvents(page)
@@ -176,8 +154,8 @@ function addPageButtonsEvents(page)
     });
   }
   else if(page == 'about'){
-    const seeMenuBtn = document.querySelector('.about__seeMenuButton');
-    sendMessageBtn.addEventListener('click', () => {
+    const seeMenuBtn = document.querySelector('.about__see-menu-button');
+    seeMenuBtn.addEventListener('click', () => {
       document.querySelector('.menu__menu').click();
     });
   }

@@ -23,16 +23,16 @@ function createContactPage()
 
       <div class="contact__panel">
         <h1 class="contact__title">Opening hours</h1>
-        <div class="contact__opening-hours__row">
+        <div class="contact__opening-hours-row">
           <p class="contact__opening__day">Monday - Friday</p>
           <p class="contact__opening__hours">9:00 - 22:00</p>
         </div>
 
-        <div class="contact__opening-hours__row">
+        <div class="contact__opening-hours-row">
           <p class="contact__opening__day">Saturday</p>
           <p class="contact__opening__hours">09:00 - 20:00</p>
         </div>
-        <div class="contact__opening-hours__row">
+        <div class="contact__opening-hours-row">
           <p class="contact__opening__day">Sunday</p>
           <p class="contact__opening__hours">10:00 - 18:00</p>
         </div>
