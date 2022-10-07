@@ -10,9 +10,7 @@ html{
 :root{
   --primary-color:rgb(227,54,73);
   --primary-color-brighter:rgb(255, 54, 74);
-  --primary-black:rgb(48, 48, 48);
   --dark-black: rgb(13, 13, 13); 
-
 }
 
 body{
@@ -40,7 +38,6 @@ body{
   list-style-type: none;
   display: flex;
   justify-content: center;
-  gap: 10%;
   gap: min(5vw, 10rem);
 }
 
