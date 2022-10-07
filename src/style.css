@@ -1,0 +1,377 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+:root{
+  --primary-color:rgb(227,54,73);
+  --primary-color-lighter:rgb(255, 54, 74);
+
+  --primary-black:rgb(48, 48, 48);
+}
+
+body{
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header__logo{
+  width: 15%;
+  max-width: 175px;
+}
+
+.header{
+  background-color: var(--primary-color);
+  background-color: rgb(250, 237, 209);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.menu__list{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  gap: min(5vw, 10rem);
+}
+
+.menu__item{
+  font-size: 2rem;
+  color: rgb(8, 8, 8);
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  list-style-type: none;
+  color: #fff;
+  color: #000;
+}
+
+.active-page{
+  position: relative;
+}
+
+.active-page::before{
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color-lighter);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.main{
+  width: 100%;
+  padding-bottom: 5rem;
+  position: relative;
+}
+
+.main::before{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./images/background-pattern.jpg');
+  filter:blur(1px);
+  opacity: 0.7;
+  z-index: -5;
+}
+
+/* Home page */
+
+.home__content{
+  width: 70%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__message{
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.accent{
+  color: var(--primary-color);
+}
+
+.home__order-now{
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  width: max-content;
+  align-self: center;
+}
+
+.home__order-now:hover{
+  background-color: var(--primary-color-lighter);
+}
+
+.home__image{
+  width: 80%;
+  margin: 2rem auto 2rem auto;
+}
+
+.home__cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 4rem;
+  padding-bottom: 5rem;
+}
+
+.home__card{
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  border-radius: 8px;
+}
+
+.home__card-title{
+  color: #fff;
+  font-size: 3.9rem;
+  margin-top: 8rem;
+  text-align: center;
+  text-shadow: 1px 1px #000;
+}
+
+.home__app-card{
+  background: url('../src/images/close-up-male-hands-using-smartphone.jpg');
+  object-fit: cover;
+  background-size: cover;
+  gap: 5rem;
+}
+
+.home__download-button,
+.home__contact-button,
+.home__check-button,
+.home__send-message-button{
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  font-size: 2rem;
+  width: 200px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home__download-button:hover,
+.home__contact-button:hover,
+.home__check-button:hover,
+.home__send-message-button:hover{
+  background-color: var(--primary-color-lighter);
+}
+
+.home__hiring-card{
+  background: url('../src/images/business-job-interview-concept.jpg');
+  object-fit: cover;
+  background-size: cover;
+  gap: 5rem;
+}
+
+.home__featured-card{
+  background: url('../src/images/pexels5dark.jpg');
+  background-position: center center;
+  object-fit: cover;
+  background-size: cover;
+  gap: 5rem;
+}
+
+.home__suggestion-card{
+  background: url('../src/images/person-placing-paper-in-box.jpg');
+  background-position: center center;
+  object-fit: cover;
+  background-size: cover;
+  gap: 5rem;
+}
+
+
+/* Menu */
+
+.menu__title{
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.menu__full-menu{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5rem;
+}
+
+/* About */
+
+.about__content{
+  box-sizing:border-box;
+  width: 70%;
+  max-width: 1100px;
+  margin: 0 auto 5rem auto;
+  position: relative;
+  top: 5rem;
+  background-color: rgba(0, 0, 0, 0.200);
+  padding: 3rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.about__left-side{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__right-side{
+  flex: 1;
+}
+
+.about__title{
+  font-size: 2.8rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+
+.about__seeMenuButton{
+  border: none;
+  background-color: var(--primary-color);
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  width: max-content;
+  font-weight: bold;
+}
+
+.about__seeMenuButton:hover{
+  opacity: 0.85;
+}
+
+.about__text{
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+/* Contact */
+
+.contact__content{
+  width: 70%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__map-container{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.contact__map{
+  width: 100%;
+}
+
+.contact__info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact__panel{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact__title{
+  font-size: 3rem;
+  color: var(--primary-black);
+}
+
+.contact__phone-title{
+  text-align: center;
+}
+
+.contact__phone-icon{
+  font-size: 3.3rem;
+  color: rgb(77, 162, 252);
+}
+
+.contact__phone-number{
+  font-size: 3.3rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact__email{
+  font-size: 1.8rem;
+  color: var(--primary-black)
+}
+
+.contact__address-icon{
+  font-size: 4rem;
+  text-align: center;
+  color: rgb(77, 162, 252);
+}
+
+.contact__address{
+  font-size: 1.8rem;
+  color: var(--primary-black);
+}
+
+.contact__opening-hours__row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  color: var(--primary-black);
+}
+
+.contact__opening__day{
+  display: inline;
+}
+
+.contact__opening__hours{
+  display: inline;
+}
