@@ -199,7 +199,7 @@ body{
 }
 
 .home__featured-card{
-  background: url('../src/images/pexels5dark.jpg');
+  background: url('../src/images/dish-dark.jpg');
   background-position: center center;
   object-fit: cover;
   background-size: cover;
