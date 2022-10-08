@@ -6,6 +6,7 @@ import createContactPage from './contact';
 
 const content = document.querySelector('#content');
 const header = createHeader();
+const footer = createFooter();
 const main = createMain();
 const homePage = createHomePage(); // default page 
 const menuPage = createMenuPage();
@@ -18,7 +19,7 @@ function init()
   content.appendChild(main);
   document.querySelector('.main__content').appendChild(homePage);
   addPageButtonsEvents('home');
-
+  content.appendChild(footer);
 }
 
 export default init;
@@ -159,4 +160,19 @@ function addPageButtonsEvents(page)
       document.querySelector('.menu__menu').click();
     });
   }
+}
+
+function createFooter()
+{
+  let footerEl = document.createElement('footer');
+  footerEl.classList.add('footer');
+  footerEl.innerHTML = `
+      <p class=footer__text>Credits:
+        <a class="footer__link" href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">freepik.com</a>,
+        <a class="footer__link" href="https://businessnamegenerator.com/" target="_blank" rel="noopener noreferrer">businessnamegenerator.com</a>,
+        <a class="footer__link" href="https://logo.com/" target="_blank" rel="noopener noreferrer">logo.com</a>
+      </p>
+  `;
+
+  return footerEl;
 }

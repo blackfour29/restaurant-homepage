@@ -11,11 +11,13 @@ html{
   --primary-color:rgb(227,54,73);
   --primary-color-brighter:rgb(255, 54, 74);
   --dark-black: rgb(13, 13, 13); 
+  --light-black: rgb(44, 44, 44);
 }
 
 body{
   min-height: 100vh;
   color: #fff;
+  background-color: var(--dark-black);
 }
 
 /* Header */
@@ -68,6 +70,21 @@ body{
   min-height: calc(100% - 679px);
   padding-bottom: 5rem;
   background-color: var(--dark-black);
+}
+
+
+.footer{
+  background-color: var(--light-black);
+  width: 100%;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer__link{
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Home page */
@@ -222,7 +239,7 @@ body{
   margin: 0 auto 5rem auto;
   position: relative;
   top: 5rem;
-  background-color: rgb(44, 44, 44);
+  background-color: var(--light-black);
   padding: 3rem;
   display: flex;
   gap: 5rem;
